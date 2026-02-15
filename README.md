@@ -1,134 +1,123 @@
 # Fake News Detection System
-Project Overview
 
-The Fake News Detection System is a Machine Learning project developed using TensorFlow in Python. The main objective of this project is to classify news articles as Real or Fake based on their textual content.
+## Project Overview
 
-The system uses Natural Language Processing techniques to preprocess text data and a deep learning model to perform classification.
+The Fake News Detection System is a Machine Learning project developed using TensorFlow in Python.
 
-Features
+The objective of this project is to classify news articles as Real or Fake based on textual content using Natural Language Processing and Deep Learning techniques.
 
-Text preprocessing and cleaning
+The system preprocesses text data, converts it into numerical format, and trains a deep learning model to perform binary classification.
 
-Tokenization and sequence padding
 
-Pre-trained word embeddings integration
+## Features
 
-Deep Learning model built using TensorFlow
+- Text cleaning and preprocessing
+- Tokenization and sequence padding
+- Integration of pre-trained GloVe word embeddings
+- Deep Learning model built using TensorFlow
+- Binary classification: Real or Fake
+- Model evaluation using accuracy and loss
 
-Binary classification: Real or Fake
 
-Model evaluation with accuracy and loss metrics
+## Technologies Used
 
-Technologies Used
+- Python
+- TensorFlow
+- NumPy
+- Pandas
+- Scikit-learn
+- Matplotlib
 
-Python
 
-TensorFlow
+## Project Structure
 
-NumPy
-
-Pandas
-
-Scikit-learn
-
-Matplotlib
-
-Project Structure
 Fake-News-Detection/
 │
 ├── dataset/
 │   └── news_dataset.csv
 │
 ├── glove.6B.50d.txt
-│
-├── app.py (if web application is included)
 ├── model_training.ipynb
+├── app.py
 ├── requirements.txt
 └── README.md
 
-Dataset
 
-The dataset contains news articles labeled as:
+## Dataset
 
-0 → Fake News
+The dataset contains labeled news articles:
 
-1 → Real News
+- 0 -> Fake News
+- 1 -> Real News
 
 The dataset is divided into training and testing sets for model development and evaluation.
 
-Model Architecture
 
-The model is built using TensorFlow Sequential API. The architecture includes:
+## Model Architecture
 
-Embedding Layer (with pre-trained GloVe embeddings)
+The model is built using TensorFlow Sequential API and includes:
 
-Dropout Layer
+- Embedding Layer with pre-trained GloVe embeddings
+- Dropout Layer
+- Conv1D Layer
+- MaxPooling1D Layer
+- LSTM Layer
+- Dense Output Layer with Sigmoid Activation
 
-Convolutional Layer (Conv1D)
+Loss Function: Binary Crossentropy  
+Optimizer: Adam
 
-MaxPooling Layer
 
-LSTM Layer
-
-Dense Output Layer with Sigmoid Activation
-
-The model uses Binary Crossentropy as the loss function and Adam optimizer for training.
-
-Installation
+## Installation
 
 Clone the repository:
 
 git clone <repository-link>
 cd Fake-News-Detection
 
-
-Install the required libraries:
+Install required dependencies:
 
 pip install -r requirements.txt
 
-How to Run
 
-Open the Jupyter Notebook:
+## How to Run
+
+Run using Jupyter Notebook:
 
 jupyter notebook model_training.ipynb
 
-
-Run all cells to train the model.
-
-If a web application is included:
+If using the web application:
 
 python app.py
 
-Model Training
 
-Text data is cleaned and tokenized.
+## Model Training Process
 
-Sequences are padded to a fixed maximum length.
+1. Load and clean the dataset
+2. Perform text preprocessing
+3. Tokenize text and create sequences
+4. Apply padding to maintain fixed length
+5. Load GloVe embeddings
+6. Build and compile the model
+7. Train the model
+8. Evaluate performance on test data
 
-Word embeddings are loaded from GloVe.
 
-The model is trained on the training dataset.
+## Evaluation Metrics
 
-Performance is evaluated using test data.
+- Accuracy
+- Loss
+- Confusion Matrix
 
-Evaluation Metrics
 
-Accuracy
+## Future Improvements
 
-Loss
+- Use larger and more diverse datasets
+- Improve preprocessing techniques
+- Experiment with advanced architectures
+- Deploy the model on cloud platforms
 
-Confusion Matrix
 
-Future Improvements
-
-Use larger and more diverse datasets
-
-Improve preprocessing techniques
-
-Experiment with different deep learning architectures
-
-Deploy the model using cloud platforms
-
-Author
+## Author
 
 Developed as a Machine Learning project using TensorFlow and Python.
