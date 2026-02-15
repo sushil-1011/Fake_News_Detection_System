@@ -31,6 +31,7 @@ The system preprocesses text data, converts it into numerical format, and trains
 
 ## Project Structure
 
+```
 Fake-News-Detection/
 │
 ├── dataset/
@@ -41,7 +42,7 @@ Fake-News-Detection/
 ├── app.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ## Dataset
 
